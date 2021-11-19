@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-Enumeration is a finite set of ordered values representing a domain or a collection. Enumerations or Enums are very widely used in all the programming languages to model the domain. Like other languages, Scala also supports enumerations. However, there are many practical problems with Scala's in-built enum type. In this tutorial, let's look at Enumeratum, a better enumeration library for Scala.
+**Enumeration is a finite set of ordered values representing a domain or a collection**. Enumerations or Enums are very widely used in all the programming languages to model the domain. Like other languages, Scala also supports enumerations. However, there are many practical problems with Scala's in-built enum type. However, there is **Enumeratum, a better enumeration library for Scala**.
 
 ## 2. Existing Ways to Create Enums
 
@@ -49,7 +49,7 @@ import enumeratum._
 
 ### 3.2. Defining a Simple Enum
 
-Let's look at how we can define a simple enum. We will be using the types EnumEntry and Enum to define our enumerations.
+Let's look at how we can define a simple enum. We will be using the types _EnumEntry_ and _Enum_ to define our enumerations.
 
 Firstly, we need to create a sealed trait or abstract class to define our enum type. For this, we need to extend the trait EnumEntry:
 ```scala
@@ -63,7 +63,7 @@ object Country extends Enum[Country] {
   override val values: IndexedSeq[Country] = findValues
 }
 ```
-Note that we have to implement the field values, with the list of possible values for the enum. Enumeratum already provides a method findValues which returns all the defined enum elements in the same order in which it is defined. This is done at compile time using macros and hence there is no run-time overhead too.
+Note that we have to implement the field values, with the list of possible values for the enum. Enumeratum already provides a method _findValues_ which returns all the defined **enum elements in the same order in which it is defined**. This is done at compile time using macros and hence there is no run-time overhead too.
 
 We can verify the above implementation:
 ```scala
@@ -171,7 +171,7 @@ assert(bad.name == "Bad Request")
 ```
 ## 4. Integration with Other Libraries
 
-Enumeratum has very good integration with other libraries. It integrates well with JSON libraries as well as database libraries. Some of the supported libraries are Json4s, Play, Slick, ReactiveMongo, Circe, and many others. The full list of integrations is available here.
+Enumeratum has very good integration with other libraries. It integrates well with JSON libraries as well as database libraries. Some of the supported libraries are Json4s, Play, Slick, ReactiveMongo, Circe, and many others. The full list of integrations is available [here](https://github.com/lloydmeta/enumeratum).
 
 ## 5. Enumeration in Scala 3
 
