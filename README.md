@@ -54,9 +54,9 @@ Let's look at how we can define a simple enum. We will be using the types _EnumE
 Firstly, we need to create a sealed trait or abstract class to define our enum type. For this, we need to extend the trait EnumEntry:
 ```scala
 sealed trait Country extends EnumEntry
-
+```
 Now we can define the supported list of countries:
-
+```scala
 object Country extends Enum[Country] {
   case object Germany extends Country
   case object India extends Country
